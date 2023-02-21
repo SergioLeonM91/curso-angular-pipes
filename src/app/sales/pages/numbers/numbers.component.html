@@ -1,0 +1,35 @@
+
+<div class="text-layout">
+    <h1>Deciman and percent Pipes</h1>
+
+    <p>
+        Angular included pipes - usually in common module
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card 
+            header="Net Sales"
+            subheader="from present year">
+            <i class="pi pi-dollar"></i>
+            {{ (netSales + 1000000) | number:'1.2-2':'de' }}
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card 
+            header="Brut Sales"
+            subheader="from present year">
+            {{ (netSales + 2000000) | currency:'CAD':'symbol-narrow':'1.4-4' }}
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card 
+            header="Earns Percent"
+            subheader="from present year">
+            {{ percent | percent:'2.2-2' }}
+        </p-card>
+    </div>
+</div>
